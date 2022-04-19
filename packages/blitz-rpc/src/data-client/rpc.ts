@@ -55,7 +55,7 @@ export function __internal_buildRpcClient({
   resolverType,
   routePath,
 }: BuildRpcClientParams): RpcClient {
-  const fullRoutePath = normalizeApiRoute("/api/rpc/" + routePath)
+  const fullRoutePath = normalizeApiRoute("/api/rpc" + routePath)
 
   const httpClient: RpcClientBase = async (params, opts = {}) => {
     const debug = (await import("debug")).default("blitz:rpc")
